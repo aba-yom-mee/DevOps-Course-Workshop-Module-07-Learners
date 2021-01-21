@@ -49,7 +49,7 @@ jobs:
 
       - name: Run npm test
         working-directory: ./DotnetTemplate.Web
-        run: npm run test
+        use: npm run test
         
         
       - name: Slack Notify
