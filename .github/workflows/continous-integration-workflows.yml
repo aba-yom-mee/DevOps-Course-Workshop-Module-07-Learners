@@ -38,6 +38,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
         
+      - name: Install npm
+        working-directory: ./DotnetTemplate.Web
+        run: npm install
+        
+        
       - name: Run npm build
         working-directory: ./DotnetTemplate.Web
         run: npm run build
