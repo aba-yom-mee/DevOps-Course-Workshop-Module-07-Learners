@@ -42,7 +42,6 @@ jobs:
         working-directory: ./DotnetTemplate.Web
         run: npm install
         
-        
       - name: Run npm build
         working-directory: ./DotnetTemplate.Web
         run: npm run build
@@ -72,9 +71,6 @@ jobs:
           
       - name: Dynamic Badges
         uses: Schneegans/dynamic-badges-action@v1.0.0
-        
-      - name: Generate the badge SVG image
-        uses: emibcn/badge-action@v1
         id: badge
         with:
           label: 'Coverage'
