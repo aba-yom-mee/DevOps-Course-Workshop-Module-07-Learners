@@ -58,6 +58,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: Build and Test Passed
+          SLACK_COLOR: '#42BD32'
           
 
       - name: Slack Failure Notification
@@ -66,5 +67,6 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: Build and Test Failed
+          SLACK_COLOR: '#BD3232'
         
 
