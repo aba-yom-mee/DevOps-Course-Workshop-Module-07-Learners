@@ -36,14 +36,13 @@ jobs:
         run: dotnet test
       
       - name: Setup Node.js environment
-        working-directory: ./DotnetTemplate.Web
         uses: actions/setup-node@v2.1.4
         
       - name: Run npm build
         working-directory: ./DotnetTemplate.Web
-        uses: npm run build
+        run: npm run build
 
       - name: Run npm test
         working-directory: ./DotnetTemplate.Web
-        uses: npm run test
+        run: npm run test
         
