@@ -38,9 +38,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
         
-#       - name: Install npm
-#         working-directory: ./DotnetTemplate.Web
-#         run: npm install
+      - name: Install npm
+        working-directory: ./DotnetTemplate.Web
+        run: npm install
         
         
       - name: Run npm build
@@ -68,5 +68,10 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: Build and Test Failed
           SLACK_COLOR: '#BD3232'
+          
+          
+      - name: Dynamic Badges
+        uses: Schneegans/dynamic-badges-action@v1.0.0
+
         
 
