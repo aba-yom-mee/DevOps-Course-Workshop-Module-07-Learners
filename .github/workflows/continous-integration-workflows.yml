@@ -54,9 +54,17 @@ jobs:
         
       - name: Slack Notify
         uses: rtCamp/action-slack-notify@v2.1.2
+        if: success()
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: Build and Test Passed
+          
 
- 
+      - name: Slack Failure Notification
+        uses: rtCamp/action-slack-notify@v2.1.2
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: Build and Test Failed
         
 
