@@ -79,7 +79,7 @@ jobs:
         with:
           label: 'Coverage'
           status: ${{ steps.coverage.outputs.coverage }}
-          path: ./badges/test-coverage.svg
+          path: .refs/heads/main
           color: ${{
               steps.coverage.outputs.coverage > 90 && 'green'              ||
               steps.coverage.outputs.coverage > 80 && 'yellow,green'       ||
